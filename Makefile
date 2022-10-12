@@ -12,6 +12,10 @@
 PYTHON=python3
 LINTER=flake8
 
+install:
+	$(PYTHON) -m pip install coverage $(LINTER)
+
+
 # Let Python unittest module find and run tests itself
 test:
 	$(PYTHON) -m unittest 
@@ -22,4 +26,4 @@ lint:
 
 # This is the Linux command to remove a directory
 clean:
-	/bin/rm -rf  __pycache__ 
+	/bin/rm -rf  __pycache__
